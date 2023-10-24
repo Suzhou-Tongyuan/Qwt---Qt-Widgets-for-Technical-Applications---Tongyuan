@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>
+    </ProjectGuid>
+    <RootNamespace>qwt_designer_plugin</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <OutputDirectory>plugins\designer\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PrimaryOutput>qwt_designer_plugin</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">plugins\designer\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">qwt_designer_plugin</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include\QtDesigner;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtOpenGL;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtScript;$(QTDIR)\include;..\src;$(QTDIR)\include\ActiveQt;moc;$(QTDIR)\mkspecs\default;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtConcurrent;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;QT_NO_KEYWORDS;QT_PLUGIN;QT_SCRIPT_LIB;QT_SVG_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QDESIGNER_EXPORT_WIDGETS;QT_THREAD_SUPPORT;NDEBUG;QT_WIDGETS_LIB;QT_PRINTSUPPORT_LIB;QT_CONCURRENT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Qt5Script.lib;Qt5Svg.lib;Qt5Xml.lib;Qt5OpenGL.lib;Qt5Gui.lib;Qt5Core.lib;Qt5Designer.lib;Qt5Widgets.lib;Qt5PrintSupport.lib;Qt5Concurrent.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\qwt_designer_plugin.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_DLL;QT_NO_DEBUG;QT_NO_KEYWORDS;QT_PLUGIN;QT_SCRIPT_LIB;QT_SVG_LIB;QT_XML_LIB;QT_OPENGL_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_HAVE_MMX;QT_HAVE_3DNOW;QT_HAVE_SSE;QT_HAVE_MMXEXT;QT_HAVE_SSE2;QDESIGNER_EXPORT_WIDGETS;QT_THREAD_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\qwt_abstract_legend.cpp" />
+    <ClCompile Include="..\src\qwt_abstract_scale.cpp" />
+    <ClCompile Include="..\src\qwt_abstract_scale_draw.cpp" />
+    <ClCompile Include="..\src\qwt_abstract_slider.cpp" />
+    <ClCompile Include="..\src\qwt_analog_clock.cpp" />
+    <ClCompile Include="..\src\qwt_arrow_button.cpp" />
+    <ClCompile Include="..\src\qwt_clipper.cpp" />
+    <ClCompile Include="..\src\qwt_color_map.cpp" />
+    <ClCompile Include="..\src\qwt_column_symbol.cpp" />
+    <ClCompile Include="..\src\qwt_compass.cpp" />
+    <ClCompile Include="..\src\qwt_compass_rose.cpp" />
+    <ClCompile Include="..\src\qwt_counter.cpp" />
+    <ClCompile Include="..\src\qwt_curve_fitter.cpp" />
+    <ClCompile Include="..\src\qwt_date.cpp" />
+    <ClCompile Include="..\src\qwt_date_scale_draw.cpp" />
+    <ClCompile Include="..\src\qwt_date_scale_engine.cpp" />
+    <ClCompile Include="GeneratedFiles\qrc_qwt_designer_plugin.cpp" />
+    <ClCompile Include="moc\moc_qwt_abstract_legend.cpp" />
+    <ClCompile Include="moc\moc_qwt_abstract_scale.cpp" />
+    <ClCompile Include="moc\moc_qwt_abstract_slider.cpp" />
+    <ClCompile Include="moc\moc_qwt_analog_clock.cpp" />
+    <ClCompile Include="moc\moc_qwt_compass.cpp" />
+    <ClCompile Include="moc\moc_qwt_counter.cpp" />
+    <ClCompile Include="moc\moc_qwt_designer_plotdialog.cpp" />
+    <ClCompile Include="moc\moc_qwt_designer_plugin.cpp" />
+    <ClCompile Include="moc\moc_qwt_dial.cpp" />
+    <ClCompile Include="moc\moc_qwt_dyngrid_layout.cpp" />
+    <ClCompile Include="moc\moc_qwt_knob.cpp" />
+    <ClCompile Include="moc\moc_qwt_legend.cpp" />
+    <ClCompile Include="moc\moc_qwt_legend_label.cpp" />
+    <ClCompile Include="moc\moc_qwt_magnifier.cpp" />
+    <ClCompile Include="moc\moc_qwt_panner.cpp" />
+    <ClCompile Include="moc\moc_qwt_picker.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_canvas.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_glcanvas.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_magnifier.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_panner.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_picker.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_renderer.cpp" />
+    <ClCompile Include="moc\moc_qwt_plot_zoomer.cpp" />
+    <ClCompile Include="moc\moc_qwt_sampling_thread.cpp" />
+    <ClCompile Include="moc\moc_qwt_scale_widget.cpp" />
+    <ClCompile Include="moc\moc_qwt_slider.cpp" />
+    <ClCompile Include="moc\moc_qwt_text_label.cpp" />
+    <ClCompile Include="moc\moc_qwt_thermo.cpp" />
+    <ClCompile Include="moc\moc_qwt_wheel.cpp" />
+    <ClCompile Include="qwt_designer_plotdialog.cpp" />
+    <ClCompile Include="qwt_designer_plugin.cpp" />
+    <ClCompile Include="..\src\qwt_dial.cpp" />
+    <ClCompile Include="..\src\qwt_dial_needle.cpp" />
+    <ClCompile Include="..\src\qwt_dyngrid_layout.cpp" />
+    <ClCompile Include="..\src\qwt_event_pattern.cpp" />
+    <ClCompile Include="..\src\qwt_graphic.cpp" />
+    <ClCompile Include="..\src\qwt_interval.cpp" />
+    <ClCompile Include="..\src\qwt_interval_symbol.cpp" />
+    <ClCompile Include="..\src\qwt_knob.cpp" />
+    <ClCompile Include="..\src\qwt_legend.cpp" />
+    <ClCompile Include="..\src\qwt_legend_data.cpp" />
+    <ClCompile Include="..\src\qwt_legend_label.cpp" />
+    <ClCompile Include="..\src\qwt_magnifier.cpp" />
+    <ClCompile Include="..\src\qwt_math.cpp" />
+    <ClCompile Include="..\src\qwt_matrix_raster_data.cpp" />
+    <ClCompile Include="..\src\qwt_null_paintdevice.cpp" />
+    <ClCompile Include="..\src\qwt_painter.cpp" />
+    <ClCompile Include="..\src\qwt_painter_command.cpp" />
+    <ClCompile Include="..\src\qwt_panner.cpp" />
+    <ClCompile Include="..\src\qwt_picker.cpp" />
+    <ClCompile Include="..\src\qwt_picker_machine.cpp" />
+    <ClCompile Include="..\src\qwt_pixel_matrix.cpp" />
+    <ClCompile Include="..\src\qwt_plot.cpp" />
+    <ClCompile Include="..\src\qwt_plot_abstract_barchart.cpp" />
+    <ClCompile Include="..\src\qwt_plot_axis.cpp" />
+    <ClCompile Include="..\src\qwt_plot_barchart.cpp" />
+    <ClCompile Include="..\src\qwt_plot_canvas.cpp" />
+    <ClCompile Include="..\src\qwt_plot_curve.cpp" />
+    <ClCompile Include="..\src\qwt_plot_dict.cpp" />
+    <ClCompile Include="..\src\qwt_plot_directpainter.cpp" />
+    <ClCompile Include="..\src\qwt_plot_glcanvas.cpp" />
+    <ClCompile Include="..\src\qwt_plot_grid.cpp" />
+    <ClCompile Include="..\src\qwt_plot_histogram.cpp" />
+    <ClCompile Include="..\src\qwt_plot_intervalcurve.cpp" />
+    <ClCompile Include="..\src\qwt_plot_item.cpp" />
+    <ClCompile Include="..\src\qwt_plot_layout.cpp" />
+    <ClCompile Include="..\src\qwt_plot_legenditem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_magnifier.cpp" />
+    <ClCompile Include="..\src\qwt_plot_marker.cpp" />
+    <ClCompile Include="..\src\qwt_plot_multi_barchart.cpp" />
+    <ClCompile Include="..\src\qwt_plot_panner.cpp" />
+    <ClCompile Include="..\src\qwt_plot_picker.cpp" />
+    <ClCompile Include="..\src\qwt_plot_rasteritem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_renderer.cpp" />
+    <ClCompile Include="..\src\qwt_plot_rescaler.cpp" />
+    <ClCompile Include="..\src\qwt_plot_scaleitem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_seriesitem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_shapeitem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_spectrocurve.cpp" />
+    <ClCompile Include="..\src\qwt_plot_spectrogram.cpp" />
+    <ClCompile Include="..\src\qwt_plot_svgitem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_textlabel.cpp" />
+    <ClCompile Include="..\src\qwt_plot_tradingcurve.cpp" />
+    <ClCompile Include="..\src\qwt_plot_xml.cpp" />
+    <ClCompile Include="..\src\qwt_plot_zoneitem.cpp" />
+    <ClCompile Include="..\src\qwt_plot_zoomer.cpp" />
+    <ClCompile Include="..\src\qwt_point_3d.cpp" />
+    <ClCompile Include="..\src\qwt_point_data.cpp" />
+    <ClCompile Include="..\src\qwt_point_mapper.cpp" />
+    <ClCompile Include="..\src\qwt_point_polar.cpp" />
+    <ClCompile Include="..\src\qwt_raster_data.cpp" />
+    <ClCompile Include="..\src\qwt_round_scale_draw.cpp" />
+    <ClCompile Include="..\src\qwt_sampling_thread.cpp" />
+    <ClCompile Include="..\src\qwt_scale_div.cpp" />
+    <ClCompile Include="..\src\qwt_scale_draw.cpp" />
+    <ClCompile Include="..\src\qwt_scale_engine.cpp" />
+    <ClCompile Include="..\src\qwt_scale_map.cpp" />
+    <ClCompile Include="..\src\qwt_scale_widget.cpp" />
+    <ClCompile Include="..\src\qwt_series_data.cpp" />
+    <ClCompile Include="..\src\qwt_slider.cpp" />
+    <ClCompile Include="..\src\qwt_spline.cpp" />
+    <ClCompile Include="..\src\qwt_symbol.cpp" />
+    <ClCompile Include="..\src\qwt_system_clock.cpp" />
+    <ClCompile Include="..\src\qwt_text.cpp" />
+    <ClCompile Include="..\src\qwt_text_engine.cpp" />
+    <ClCompile Include="..\src\qwt_text_label.cpp" />
+    <ClCompile Include="..\src\qwt_thermo.cpp" />
+    <ClCompile Include="..\src\qwt_transform.cpp" />
+    <ClCompile Include="..\src\qwt_wheel.cpp" />
+    <ClCompile Include="..\src\qwt_widget_overlay.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\qwt.h" />
+    <CustomBuild Include="..\src\qwt_abstract_legend.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_abstract_legend.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_abstract_scale.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_abstract_scale.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_abstract_scale_draw.h" />
+    <CustomBuild Include="..\src\qwt_abstract_slider.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_abstract_slider.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_analog_clock.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_analog_clock.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_arrow_button.h" />
+    <ClInclude Include="..\src\qwt_clipper.h" />
+    <ClInclude Include="..\src\qwt_color_map.h" />
+    <ClInclude Include="..\src\qwt_column_symbol.h" />
+    <CustomBuild Include="..\src\qwt_compass.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_compass.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_compass_rose.h" />
+    <ClInclude Include="..\src\qwt_compat.h" />
+    <CustomBuild Include="..\src\qwt_counter.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_counter.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_curve_fitter.h" />
+    <ClInclude Include="..\src\qwt_date.h" />
+    <ClInclude Include="..\src\qwt_date_scale_draw.h" />
+    <ClInclude Include="..\src\qwt_date_scale_engine.h" />
+    <CustomBuild Include="qwt_designer_plotdialog.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_designer_plotdialog.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="qwt_designer_plugin.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_designer_plugin.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_dial.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_dial.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_dial_needle.h" />
+    <CustomBuild Include="..\src\qwt_dyngrid_layout.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_dyngrid_layout.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_event_pattern.h" />
+    <ClInclude Include="..\src\qwt_global.h" />
+    <ClInclude Include="..\src\qwt_graphic.h" />
+    <ClInclude Include="..\src\qwt_interval.h" />
+    <ClInclude Include="..\src\qwt_interval_symbol.h" />
+    <CustomBuild Include="..\src\qwt_knob.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_knob.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_legend.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_legend.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_legend_data.h" />
+    <CustomBuild Include="..\src\qwt_legend_label.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_legend_label.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_magnifier.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_magnifier.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_math.h" />
+    <ClInclude Include="..\src\qwt_matrix_raster_data.h" />
+    <ClInclude Include="..\src\qwt_null_paintdevice.h" />
+    <ClInclude Include="..\src\qwt_painter.h" />
+    <ClInclude Include="..\src\qwt_painter_command.h" />
+    <CustomBuild Include="..\src\qwt_panner.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_panner.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_picker.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_picker.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_picker_machine.h" />
+    <ClInclude Include="..\src\qwt_pixel_matrix.h" />
+    <CustomBuild Include="..\src\qwt_plot.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_plot_abstract_barchart.h" />
+    <ClInclude Include="..\src\qwt_plot_barchart.h" />
+    <CustomBuild Include="..\src\qwt_plot_canvas.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_canvas.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_plot_curve.h" />
+    <ClInclude Include="..\src\qwt_plot_dict.h" />
+    <ClInclude Include="..\src\qwt_plot_directpainter.h" />
+    <CustomBuild Include="..\src\qwt_plot_glcanvas.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_glcanvas.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_plot_grid.h" />
+    <ClInclude Include="..\src\qwt_plot_histogram.h" />
+    <ClInclude Include="..\src\qwt_plot_intervalcurve.h" />
+    <ClInclude Include="..\src\qwt_plot_item.h" />
+    <ClInclude Include="..\src\qwt_plot_layout.h" />
+    <ClInclude Include="..\src\qwt_plot_legenditem.h" />
+    <CustomBuild Include="..\src\qwt_plot_magnifier.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_magnifier.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_plot_marker.h" />
+    <ClInclude Include="..\src\qwt_plot_multi_barchart.h" />
+    <CustomBuild Include="..\src\qwt_plot_panner.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_panner.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_plot_picker.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_picker.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_plot_rasteritem.h" />
+    <CustomBuild Include="..\src\qwt_plot_renderer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_renderer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_plot_rescaler.h" />
+    <ClInclude Include="..\src\qwt_plot_scaleitem.h" />
+    <ClInclude Include="..\src\qwt_plot_seriesitem.h" />
+    <ClInclude Include="..\src\qwt_plot_shapeitem.h" />
+    <ClInclude Include="..\src\qwt_plot_spectrocurve.h" />
+    <ClInclude Include="..\src\qwt_plot_spectrogram.h" />
+    <ClInclude Include="..\src\qwt_plot_svgitem.h" />
+    <ClInclude Include="..\src\qwt_plot_textlabel.h" />
+    <ClInclude Include="..\src\qwt_plot_tradingcurve.h" />
+    <ClInclude Include="..\src\qwt_plot_zoneitem.h" />
+    <CustomBuild Include="..\src\qwt_plot_zoomer.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_plot_zoomer.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_point_3d.h" />
+    <ClInclude Include="..\src\qwt_point_data.h" />
+    <ClInclude Include="..\src\qwt_point_mapper.h" />
+    <ClInclude Include="..\src\qwt_point_polar.h" />
+    <ClInclude Include="..\src\qwt_raster_data.h" />
+    <ClInclude Include="..\src\qwt_round_scale_draw.h" />
+    <ClInclude Include="..\src\qwt_samples.h" />
+    <CustomBuild Include="..\src\qwt_sampling_thread.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_sampling_thread.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_scale_div.h" />
+    <ClInclude Include="..\src\qwt_scale_draw.h" />
+    <ClInclude Include="..\src\qwt_scale_engine.h" />
+    <ClInclude Include="..\src\qwt_scale_map.h" />
+    <CustomBuild Include="..\src\qwt_scale_widget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_scale_widget.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_series_data.h" />
+    <ClInclude Include="..\src\qwt_series_store.h" />
+    <CustomBuild Include="..\src\qwt_slider.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_slider.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_spline.h" />
+    <ClInclude Include="..\src\qwt_symbol.h" />
+    <ClInclude Include="..\src\qwt_system_clock.h" />
+    <ClInclude Include="..\src\qwt_text.h" />
+    <ClInclude Include="..\src\qwt_text_engine.h" />
+    <CustomBuild Include="..\src\qwt_text_label.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_text_label.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\src\qwt_thermo.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_thermo.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_transform.h" />
+    <CustomBuild Include="..\src\qwt_wheel.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\bin\moc.exe;%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\moc\moc_%(Filename).cpp"  -D_WINDOWS -DUNICODE -DWIN32 -DQT_DLL -DQT_NO_DEBUG -DQT_NO_KEYWORDS -DQT_PLUGIN -DQT_SCRIPT_LIB -DQT_SVG_LIB -DQT_XML_LIB -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_HAVE_MMX -DQT_HAVE_3DNOW -DQT_HAVE_SSE -DQT_HAVE_MMXEXT -DQT_HAVE_SSE2 -DQDESIGNER_EXPORT_WIDGETS -DQT_THREAD_SUPPORT -DNDEBUG -DQT_WIDGETS_LIB -DQT_PRINTSUPPORT_LIB -DQT_CONCURRENT_LIB -D_WINDLL  "-I$(QTDIR)\include\QtDesigner" "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtOpenGL" "-I$(QTDIR)\include\QtXml" "-I$(QTDIR)\include\QtSvg" "-I$(QTDIR)\include\QtScript" "-I$(QTDIR)\include" "-I.\..\src" "-I$(QTDIR)\include\ActiveQt" "-I.\moc" "-I$(QTDIR)\mkspecs\default" "-I$(QTDIR)\include\QtWidgets" "-I$(QTDIR)\include\QtPrintSupport" "-I$(QTDIR)\include\QtConcurrent" "-IC:\Program Files (x86)\Visual Leak Detector\include"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Moc%27ing qwt_wheel.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\moc\moc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\src\qwt_widget_overlay.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="qwt_designer_plugin.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(FullPath);.\pixmaps\qwtplot.png;.\pixmaps\qwtanalogclock.png;.\pixmaps\qwtcounter.png;.\pixmaps\qwtcompass.png;.\pixmaps\qwtdial.png;.\pixmaps\qwtknob.png;.\pixmaps\qwtscale.png;.\pixmaps\qwtslider.png;.\pixmaps\qwtthermo.png;.\pixmaps\qwtwheel.png;.\pixmaps\qwtwidget.png;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="pixmaps\qwtanalogclock.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtcompass.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtcounter.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtdial.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtknob.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtplot.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtscale.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtslider.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtthermo.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtwheel.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+    <None Include="pixmaps\qwtwidget.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties QtVersion_x0020_Win32="4.8.6" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="$(DefaultQtVersion)" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
